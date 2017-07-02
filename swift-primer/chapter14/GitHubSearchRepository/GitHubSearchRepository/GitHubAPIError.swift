@@ -24,7 +24,7 @@ struct GitHubAPIError: JSONDecodable, Error {
             }
             
             guard let field = dictionary["field"] as? String else {
-                throw JSONDecodeError.missingValue(key: "field", actualValue: dictonary["field"])
+                throw JSONDecodeError.missingValue(key: "field", actualValue: dictionary["field"])
             }
             
             guard let code = dictionary["code"] as? String else {
