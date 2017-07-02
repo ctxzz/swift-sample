@@ -17,8 +17,8 @@ struct SearchResponse<Item: JSONDecodable> : JSONDecodable {
             throw JSONDecodeError.invalidFormat(json: json)
         }
         
-        guard let totalCount = dictionary["totalCount"] as? Int else {
-            throw JSONDecodeError.missingValue(key: "totalCount", actualValue: dictionary["totalCount"])
+        guard let totalCount = dictionary["total_count"] as? Int else {
+            throw JSONDecodeError.missingValue(key: "total_count", actualValue: dictionary["total_count"])
         }
         
         guard let itemObjects = dictionary["items"] as? [Any] else {

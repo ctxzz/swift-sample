@@ -27,8 +27,8 @@ struct Repository: JSONDecodable {
             throw JSONDecodeError.missingValue(key: "name", actualValue: dictionary["name"])
         }
         
-        guard let fullName = dictionary["fullName"] as? String else {
-            throw JSONDecodeError.missingValue(key: "fullName", actualValue: dictionary["fullName"])
+        guard let fullName = dictionary["full_name"] as? String else {
+            throw JSONDecodeError.missingValue(key: "full_name", actualValue: dictionary["full_name"])
         }
         
         guard let owner = dictionary["owner"] else {
